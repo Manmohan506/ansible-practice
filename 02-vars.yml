@@ -1,4 +1,4 @@
-- name:Demo on Vars
+- name: Demo on Vars
   hosts: all
   vars:
     URL: play.example.com
@@ -7,6 +7,6 @@
     - name: Print URL
       debug:
         msg:URL = {{ URL }}
-        .
         
+
            
