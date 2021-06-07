@@ -2,11 +2,11 @@
   hosts: all
   vars:
     URL: play.example.com
-    PROJECTS: example
+    PROJECT: example
   tasks:
     - name: Print URL
       debug:
-        msg:URL = {{ URL }}
+        msg: URL = {{ URL }}
         
 
            
