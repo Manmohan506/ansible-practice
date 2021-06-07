@@ -2,7 +2,7 @@
   hosts: all
 # vars_files:
 #   - example-vars.yml   
- // vars:
+  vars:
     URL: play.example.com
     PROJECT: example
   vars_prompt:  
