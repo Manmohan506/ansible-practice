@@ -17,7 +17,7 @@
 
     - name: Download foo.conf
       get_url:
-        url: http://172.31.13.99:8081/repository/cart/cart-{{APP_VERSION}}.ZIP
+        url: http://172.31.87.187:8081/repository/cart/cart-{{APP_VERSION}}.ZIP
         dest: /tmp/frontend-1.zip
         username: admin
         password: DevOps321
@@ -33,6 +33,6 @@
         
     - name: Unarchive a file that is already on the remote machine
       unarchive:
-        src: /tmp/frontend.zip
+        src: /tmp/frontend-1.zip
         dest: /var/www
         remote_src: yes
