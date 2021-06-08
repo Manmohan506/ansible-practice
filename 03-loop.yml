@@ -8,4 +8,15 @@
         - banana
         - apple
         - orange
-  
+    - name: Create servers
+      debug:
+        msg: "{{ item.name }}"
+      loop:
+        - name: server1
+          disk: 3gb
+          ram: 15gb
+          network:
+            nic01: 100gb
+            nic02: 10gb
+            
+              
