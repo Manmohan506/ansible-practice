@@ -1,6 +1,7 @@
 - name: setup roboshop project
   hosts: all
   become: yes
+  ## THIS become can also be useer at task level
   tasks:
     - name: Apt Update
       apt:
