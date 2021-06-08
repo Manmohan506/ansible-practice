@@ -15,9 +15,9 @@
         name: nginx
         enabled:yes
 
-   
+    - name: Download conf
       get_url:
-        url: http://172.31.13.99:8081/repository/cart/cart-{{APP_VERSION}}.zip 
+        url: http://172.31.13.99:8081/repository/cart/cart-{{APP_VERSION}}.ZIP
         dest: /tmp/frontend.zip
         username: admin
         password: DevOps321
