@@ -2,6 +2,9 @@
   hosts: all
   vars:
     URL: https://github.com/Manmohan506/frontend-1/archive/main.zip
+    tag_data:
+          Environment: dev
+          Application: payment
   tasks:
     - name: Print filename of a url
       debug:
@@ -9,4 +12,9 @@
 
     - name: Print last colum
       debug:
-        msg: "{{ URL.split('/') }}"
+        msg: "{{ URL.split('/') | last }}"
+
+    - name: Print tag data
+      debug:
+        msg: "{{ ta_data | dict2items }}"    
+        
