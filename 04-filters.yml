@@ -16,5 +16,4 @@
 
     - name: Print tag data
       debug:
-        msg: "{{ ta_data | dict2items }}"    
-        
+        msg: "{{ tag_data | dict2items }}"    
