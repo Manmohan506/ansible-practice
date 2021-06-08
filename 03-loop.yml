@@ -24,5 +24,6 @@
           ram: 15gb
           network:
             nic01: 100gb
-            nic02: 10gb    
-
+            nic02: 10gb  
+#       loop_control:
+          label: "{{ item.name }}"         
