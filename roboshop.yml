@@ -17,7 +17,7 @@
 
     - name: Download conf
       get_url:
-        url: http://172.31.13.99:8081/repository/cart/cart-{{APP_VERSION}}.ZIP
+        url: http://172.31.13.99:8081/repository/cart-{{APP_VERSION}}.ZIP
         dest: /tmp/frontend-1.zip
         username: admin
         password: DevOps321
