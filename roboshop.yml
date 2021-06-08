@@ -9,25 +9,25 @@
        update_cache: yes
        state: present
 
-    - name: Start Nginx
-      systemd:
+     - name: Start Nginx
+       systemd:
         state: started
         name: nginx
         enabled:yes
 
-    - name: Download conf
+     - name: Download conf
       get_url:
-        url: http://172.31.13.99:8081/repository/cart-{{APP_VERSION}}.ZIP
+        url: http://172.31.13.99:8081/repository/cart/cart-{{APP_VERSION}}.ZIP
         dest: /tmp/frontend-1.zip
         username: admin
         password: DevOps321
 
-    - name: Delete the default content
+     - name: Delete the default content
       file:
         path: /var/www/html
         state: absent
         
-    - name: Delete the Nginx site-enabled default file
+     - name: Delete the Nginx site-enabled default file
       file:
         path: /etc/nginx/sites-enabled/default
         state: absent      
