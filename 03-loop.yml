@@ -3,7 +3,7 @@
   tasks:
     - name: print fruitnames
       debug:
-        msg: "Fruit = {{item}}"
+        msg: "Fruit = {{ item }}"
       loop:
         - banana
         - apple
