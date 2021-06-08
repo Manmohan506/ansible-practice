@@ -18,5 +18,11 @@
           network:
             nic01: 100gb
             nic02: 10gb
-            
-              
+
+        - name: server2
+          disk: 3gb
+          ram: 15gb
+          network:
+            nic01: 100gb
+            nic02: 10gb    
+
