@@ -14,7 +14,7 @@
         name: nginx
         enabled:yes
 
-   - name: Download foo.conf
+    - name: Download foo.conf
       get_url:
         url: http://172.31.13.99:8081/repository/cart/cart-{{APP_VERSION}}.zip 
         dest: /tmp/frontend.zip
