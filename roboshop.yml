@@ -9,31 +9,30 @@
        update_cache: yes
        state: present
 
-     - name: Start Nginx
+    - name: Start Nginx
        systemd:
         state: started
         name: nginx
         enabled:yes
 
-     - name: Download conf
+    - name: Download foo.conf
       get_url:
         url: http://172.31.13.99:8081/repository/cart/cart-{{APP_VERSION}}.ZIP
         dest: /tmp/frontend-1.zip
         username: admin
         password: DevOps321
 
-     - name: Delete the default content
+    - name: Delete the default content
       file:
-        path: /var/www/html
+        path: "{{ item }}"
         state: absent
+      loop:
+        - /etc/nginx/sites-enaled/default  
+        - /etc/nginx/sites-available/default
+        - /var/www/html
         
-     - name: Delete the Nginx site-enabled default file
-      file:
-        path: /etc/nginx/sites-enabled/default
-        state: absent      
-
-     - name: Delete the Nginx site-available default file
-      file:
-        path: /etc/nginx/sites-enabled/default
-        state: absent        
-
+    - name: Unarchive a file that is already on the remote machine
+      unarchive:
+        src: /tmp/frontend-1.zip
+        dest: /var/www
+        remote_src: yes
