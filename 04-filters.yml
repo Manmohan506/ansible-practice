@@ -1,0 +1,12 @@
+- name: Demo on facts
+  hosts: all
+  vars:
+    URL: https://github.com/Manmohan506/frontend-1/archive/main.zip
+  tasks:
+    - name: Print filename of a url
+      debug:
+        msg: "{{ URL | urlsplit }}"
+
+    - name: Print last colum
+      debug:
+        msg: "{{ URL.split('/') }}"
