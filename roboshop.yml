@@ -16,18 +16,4 @@
         enabled:yes
 
 
-    - name: Delete the default content
-      file:
-        path: /var/www/html
-        state: absent
-        
-    - name: Delete the Nginx site-enabled default file
-      file:
-        path: /etc/nginx/sites-enabled/default
-        state: absent      
-
-     - name: Delete the Nginx site-available default file
-      file:
-        path: /etc/nginx/sites-enabled/default
-        state: absent        
-
+    
