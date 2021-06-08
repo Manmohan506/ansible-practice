@@ -33,6 +33,6 @@
         
     - name: Unarchive a file that is already on the remote machine
       unarchive:
-        src: /tmp/frontend.zip
+        src: /tmp/frontend-1.zip
         dest: /var/www
         remote_src: yes
