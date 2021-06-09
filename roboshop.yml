@@ -31,8 +31,8 @@
         - /etc/nginx/sites-available/default
         - /var/www/html
         
-     - name: Create HtDocs Directory
-       file:
+    - name: Create HtDocs Directory
+      file:
          path: /var/www/html
          state: directory
 
