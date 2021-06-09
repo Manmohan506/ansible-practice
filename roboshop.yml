@@ -39,5 +39,12 @@
     - name: Unzip the Download Content
       unarchive:
         src: /tmp/frontend.zip
-        dest: /var/www
+        dest: /var/www/html
         remote_src: yes
+
+    - name: Start Nginx
+      systemd:
+        state: started
+        name: nginx
+        enabled: yes
+            
