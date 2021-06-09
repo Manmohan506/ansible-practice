@@ -31,7 +31,12 @@
         - /etc/nginx/sites-available/default
         - /var/www/html
         
-    - name: Unarchive a file that is already on the remote machine
+     - name: Create HtDocs Directory
+       file:
+         path: /var/www/html
+         state: directory
+
+    - name: Unzip the Download Content
       unarchive:
         src: /tmp/frontend.zip
         dest: /var/www
