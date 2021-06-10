@@ -26,7 +26,7 @@
 # vars
 # iventary vars
 
-#- name: Demo on Dynamic Vars
+- name: Demo on Dynamic Vars
   hosts: NEW
   tasks:
     - name: Gather date
@@ -45,7 +45,7 @@
         msg:DATE = {{ DATE }}      
 
 
-#- name: Print some facts
+- name: Print some facts
   hosts: all
   tasks:
     - name: Print facts
