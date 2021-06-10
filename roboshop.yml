@@ -1,9 +1,11 @@
 - name: setup roboshop project
   hosts: all
   become: yes
-  ## THIS become can also be useer at task level
-  
-  roles:
-    - frontend
-    - mongodb
-    
+  ## THIS become can also be user at task level
+  tasks:
+    - name: Apt Update
+      apt:
+        name: nginx
+        update_cache: yes
+        state: present
+        
