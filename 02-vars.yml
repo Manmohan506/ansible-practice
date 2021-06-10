@@ -28,7 +28,7 @@
 # iventary vars
 
 - name: Demo on Dynamic Vars
-  hosts: all
+  hosts: NEW
   tasks:
     - name: Gather date
       shell: date +%F
