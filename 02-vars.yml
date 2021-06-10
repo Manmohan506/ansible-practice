@@ -35,5 +35,5 @@
       register: out
     - name: Print Date
       debug:
-        msg: Date = {{ out.stdout }}  
+        msg: Date = {{ out }}  
 
