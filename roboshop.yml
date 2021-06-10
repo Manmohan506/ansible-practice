@@ -3,7 +3,7 @@
   become: yes
   ## THIS become can also be user at task level
   tasks:
-    - name: INSTALL NGINX
+    - name: Install Nginx
       apt:
         name: nginx
         update_cache: yes
