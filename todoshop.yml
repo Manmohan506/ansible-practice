@@ -31,5 +31,11 @@
         - /etc/nginx/sites-available/default
         - /var/www/html
 
-    
-
+    - name: Unarchive a file that is already on the remote machine
+      unarchive:
+        src: /tmp/frontend.zip
+        dest: /var/www
+        remote_src: yes
+        yes:yes
+        ssssss
+        
