@@ -36,6 +36,6 @@
         src: /tmp/frontend.zip
         dest: /var/www
         remote_src: yes
-        yes:yes
-        ssssss
+        
+       
         
