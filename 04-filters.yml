@@ -1,7 +1,7 @@
-- name: Demo on facts
+- name: Demo on filters
   hosts: all
   vars:
-    URL: https://github.com/Manmohan506/frontend-1/archive/main.zip
+    URL: https://github.com/Manmohan506/frontend/archive/main.zip
     tag_data:
           Environment: dev
           Application: payment
