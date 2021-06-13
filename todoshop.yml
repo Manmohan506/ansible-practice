@@ -29,11 +29,11 @@
 
     - name: Delete Nginx site-enabled default file
       file:
-        path: /etc/ngnx/sites-enabled/default
+        path: /etc/nginx/sites-enabled/default
         state: absent
 
     - name: Delete Nginx site-available default file
       file:
-        path: /etc/ngnx/sites-available/default
+        path: /etc/nginx/sites-available/default
         state: absent    
 
