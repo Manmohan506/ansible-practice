@@ -19,4 +19,19 @@
       get_url:
         url: http://172.31.13.99:8081/repository/todo/todo-{{APP_VERSION}}.zip
         dest: /tmp/frontend.zip
-        
+
+    - name: Delete the default content
+      file:
+        path: /var/www/html
+        state: absent
+
+    - name: Delete Nginx site-enabled default file
+      file:
+        path: /etc/ngnx/sites-enabled/default
+        state: absent
+
+    - name: Delete Nginx site-available default file
+      file:
+        path: /etc/ngnx/sites-available/default
+        state: absent    
+
