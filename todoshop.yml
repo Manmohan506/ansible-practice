@@ -17,23 +17,22 @@
     
     - name: Download foo.conf
       get_url:
-        url: http://172.31.13.99:8081/repository/todo/todo-{{APP_VERSION}}.zip
+        url: http://172.31.13.99:8081/repository/frontend/frontend-{{APP_VERSION}}.zip
         dest: /tmp/frontend.zip
         username: admin
         password: DevOps321
 
     - name: Delete the default content
       file:
-        path: /var/www/html
+        path: "{{ item }}"
         state: absent
+      loop:
+        - /etc/nginx/sites-enabled/default
+        - /etc/nginx/sites-available/default
+        - /var/www/html
 
-    - name: Delete Nginx site-enabled default file
-      file:
-        path: /etc/nginx/sites-enabled/default
-        state: absent
-
-    - name: Delete Nginx site-available default file
-      file:
-        path: /etc/nginx/sites-available/default
-        state: absent    
-
+    - name: Unarchive a file that is already on the remote machine
+      unarchive:
+        src: /tmp/frontend.zip
+        dest: /var/www
+        remote_src: yes
