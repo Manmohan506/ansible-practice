@@ -19,6 +19,8 @@
       get_url:
         url: http://172.31.13.99:8081/repository/todo/todo-{{APP_VERSION}}.zip
         dest: /tmp/frontend.zip
+        username: admin
+        password: DevOps321
 
     - name: Delete the default content
       file:
