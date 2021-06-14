@@ -2,13 +2,10 @@
   hosts: all
   become: yes
   ## THIS become can also be user at task level
-  tasks:
-    - name: Install Nginx
-      apt:
-        name: nginx
-        update_cache: yes
-        state: present
+  roles:
+    - frontend
 
+<<<<<<< HEAD
     - name: Start Nginx
       systemd:
         state: started
@@ -36,3 +33,8 @@
         src: /tmp/frontend.zip
         dest: /var/www
         remote_src: yes
+=======
+    qq
+  
+  
+>>>>>>> cf50342ffa7773377bc1bb0008c5a19fada996fd
