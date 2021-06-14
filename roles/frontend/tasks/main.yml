@@ -1,16 +1,11 @@
-tasks:
+
     - name: Install Nginx
       apt:
        name: nginx
        update_cache: yes
        state: present
 
-    - name: Start Nginx
-      systemd:
-        state: started
-        name: nginx
-        enabled: yes
-
+    
     - name: Download foo.conf
       get_url:
         url: http://172.31.13.99:8081/repository/frontend/frontend-{{APP_VERSION}}.ZIP
