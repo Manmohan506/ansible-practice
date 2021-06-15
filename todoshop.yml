@@ -1,0 +1,9 @@
+- name: Setup roboshop project
+  hosts: all
+  become: yes
+
+  ## This beocme can also be usedf at task level
+  roles:
+    - frontend
+    - mongodb
+    
